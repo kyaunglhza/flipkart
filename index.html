@@ -1,0 +1,1960 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flipkart</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="  https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-gray-100">
+    <!-- Navbar Start -->
+    <nav class="bg-white border-gray-200 shadow-lg sticky top-0 z-50">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="#" class="flex items-center">
+                <img src="img/logo.svg" alt="">
+                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">FlipKart</span>
+            </a>
+
+            <input type="search" id="default-search"
+                class="block w-96 p-4 pl-10 text-sm text-gray-900 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-100 text-blackdark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Search for products">
+
+            <button data-collapse-toggle="navbar-multi-level" type="button"
+                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                aria-controls="navbar-multi-level" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-multi-level">
+                <ul
+                    class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 dark:border-gray-700">
+                    <li>
+                        <a href="#"
+                            class="block mt-3 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-black dark:bg-blue-600 md:dark:bg-transparent"
+                            aria-current="page">Become a Seller</a>
+                    </li>
+
+                    <li class="flex">
+                        <i class="fas fa-user mt-3 mr-2" style="color: black;"></i>
+
+                        <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown"
+                            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-gray-600 dark:hover:bg-blue-500 dark:focus:ring-blue-800"
+                            type="button">
+                            Sign in <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 1 4 4 4-4" />
+                            </svg>
+                        </button>
+
+                        <!-- Dropdown menu -->
+                        <div id="dropdown"
+                            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                                aria-labelledby="dropdownDefaultButton">
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign
+                                        out</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="flex mt-3">
+                        <i class="fas fa-shopping-cart mr-2" style="color: black;"></i>
+                        <a href="#"
+                            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-black md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Cart</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Category Start -->
+
+    <div class="max-w-[1600px] mx-auto mt-4 shadow py-4 px-6 bg-white">
+        <div class="w-full flex items-center justify-center gap-x-20">
+            <div class="flex flex-col space-y-3">
+                <img class="w-16 h-16" src="img/1.webp" alt="">
+                <span>Grocery</span>
+            </div>
+            <div class="flex flex-col space-y-3">
+                <img class="w-16 h-16" src="img/2.webp" alt="">
+                <span>Mobiles</span>
+            </div>
+            <div class="flex flex-col space-y-3">
+                <img class="w-16 h-16" src="img/3.webp" alt="">
+
+                <div class="group inline-block relative">
+                    <button class="outline-none focus:outline-none flex items-center min-w-32">
+                        <span class="pr-1 font-semibold flex-1">Fashion</span>
+                        <span>
+                            <svg class="fill-current h-4 w-4 transform group-hover:-rotate-180
+                          transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                            </svg>
+                        </span>
+                    </button>
+                    <ul class="bg-white z-30 border rounded-sm transform scale-0 group-hover:scale-100 absolute 
+                    transition duration-150 ease-in-out origin-top w-48">
+                        <li class="rounded-sm px-3 py-1 hover:bg-gray-100 text-black">Men top wear</li>
+                        <li class="rounded-sm px-3 py-1 hover:bg-gray-100 text-black">Men bottom wear</li>
+                        <li class="rounded-sm  px-3 py-1 hover:bg-gray-100 text-black">
+                            <button class="w-full text-left flex items-center outline-none focus:outline-none">
+                                <span class="pr-1 flex-1">Women clothing</span>
+                                <span class="mr-auto">
+                                    <svg class="fill-current h-4 w-4
+                              transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                    </svg>
+                                </span>
+                            </button>
+                            <ul class="bg-white border rounded-sm absolute top-0 right-0 ƒ
+                    transition duration-150 ease-in-out origin-top-left
+                    w-48
+                    ">
+                                <li class="px-3 py-1 hover:bg-gray-100 text-black">shoe</li>
+                                <li class="px-3 py-1 hover:bg-gray-100 text-black">T Shirt</li>
+                                <li class="px-3 py-1 hover:bg-gray-100 text-black">Pants</li>
+                                <li class="px-3 py-1 hover:bg-gray-100 text-black">Raincoat</li>
+                                <li class="px-3 py-1 hover:bg-gray-100 text-black">shoe</li>
+                                <li class="rounded-sm relative px-3 py-1 hover:bg-gray-100">
+                                    <button class="w-full text-left flex items-center outline-none focus:outline-none">
+                                        <span class="pr-1 flex-1 text-black">bag</span>
+                                        <span class="mr-auto">
+                                            <svg class="fill-current h-4 w-4
+                                  transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 20 20">
+                                                <path
+                                                    d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                            </svg>
+                                        </span>
+                                    </button>
+                                    <ul class="bg-white border rounded-sm absolute top-0 right-0 
+                        transition duration-150 ease-in-out origin-top-left
+                        min-w-32
+                        ">
+                                        <li class="px-3 py-1 hover:bg-gray-100 text-black">2.7</li>
+                                        <li class="px-3 py-1 hover:bg-gray-100 text-black">3+</li>
+                                    </ul>
+                                </li>
+                                <li class="px-3 py-1 hover:bg-gray-100 text-black">Go</li>
+                                <li class="px-3 py-1 hover:bg-gray-100 text-black">Rust</li>
+                            </ul>
+                        </li>
+                        <li class="rounded-sm px-3 py-1 hover:bg-gray-100 text-black">For kid</li>
+                        <li class="rounded-sm px-3 py-1 hover:bg-gray-100 text-black">Foot wear</li>
+                        <li class="rounded-sm px-3 py-1 hover:bg-gray-100 text-black">Essential</li>
+                        <li class="rounded-sm px-3 py-1 hover:bg-gray-100 text-black">Cosmestics</li>
+                        <li class="rounded-sm px-3 py-1 hover:bg-gray-100 text-black">For kid</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex flex-col space-y-3">
+                <img class="w-16 h-16" src="img/4.webp" alt="">
+                <!-- <h5>Furniture</h5> -->
+
+
+                <button id="dropdownHoverButton" data-dropdown-toggle="dropdownHover2" data-dropdown-trigger="hover"
+                    class="flex items-center" type="button">
+                    Mobile <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="none" viewBox="0 0 10 6">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m1 1 4 4 4-4" />
+                    </svg>
+                </button>
+
+
+                <!-- Dropdown menu -->
+                <div id="dropdownHover2"
+                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 bg-slate-50 bg-cover"
+                    style="z-index: 100;">
+                    <ul class="py-2 text-sm text-black" aria-labelledby="dropdownHoverButton">
+                        <li>
+                            <a href="#"
+                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-black-100 text-black">All</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-black-100 text-black">Samsung</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-black-100 text-black">Apple</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-black-100 text-black">Vivo</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-black-100 text-black">Oppo</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex flex-col space-y-3">
+                <img class="w-16 h-16" src="img/5.webp" alt="">
+                <h5>Appliances</h5>
+            </div>
+            <div class="flex flex-col space-y-3">
+                <img class="w-16 h-16" src="img/6.webp" alt="">
+                <!-- <h5>Travel</h5> -->
+
+                <div class="group inline-block relative">
+                    <button class="outline-none focus:outline-none flex items-center min-w-32">
+                        <span class="pr-1 font-semibold flex-1">Travel</span>
+                        <span>
+                            <svg class="fill-current h-4 w-4 transform group-hover:-rotate-180
+                          transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                            </svg>
+                        </span>
+                    </button>
+                    <ul class="bg-white z-30 border rounded-sm transform scale-0 group-hover:scale-100 absolute 
+                    transition duration-150 ease-in-out origin-top w-48">
+
+                        <li class="rounded-sm  px-3 py-1 hover:bg-gray-100 text-black">
+                            <button class="w-full text-left flex items-center outline-none focus:outline-none">
+                                <span class="pr-1 flex-1">Men Top Wear</span>
+                                <span class="mr-auto">
+                                    <svg class="fill-current h-4 w-4
+                              transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                    </svg>
+                                </span>
+                            </button>
+                            <ul class="bg-white border rounded-sm absolute top-0 right-0 ƒ
+                    transition duration-150 ease-in-out origin-top-left
+                    w-48
+                    ">
+                                <li class="px-3 py-1 hover:bg-gray-100 text-black">shoe</li>
+                                <li class="px-3 py-1 hover:bg-gray-100 text-black">T Shirt</li>
+                                <li class="px-3 py-1 hover:bg-gray-100 text-black">Pants</li>
+                                <li class="px-3 py-1 hover:bg-gray-100 text-black">Raincoat</li>
+                                <li class="px-3 py-1 hover:bg-gray-100 text-black">shoe</li>
+                                <li class="rounded-sm relative px-3 py-1 hover:bg-gray-100">
+                                    <button class="w-full text-left flex items-center outline-none focus:outline-none">
+                                        <span class="pr-1 flex-1 text-black">bag</span>
+                                        <span class="mr-auto">
+                                            <svg class="fill-current h-4 w-4
+                                  transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 20 20">
+                                                <path
+                                                    d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                            </svg>
+                                        </span>
+                                    </button>
+                                    <ul class="bg-white border rounded-sm absolute top-0 right-0 
+                        transition duration-150 ease-in-out origin-top-left
+                        min-w-32
+                        ">
+                                        <li class="px-3 py-1 hover:bg-gray-100 text-black">2.7</li>
+                                        <li class="px-3 py-1 hover:bg-gray-100 text-black">3+</li>
+                                    </ul>
+                                </li>
+                                <li class="px-3 py-1 hover:bg-gray-100 text-black">Go</li>
+                                <li class="px-3 py-1 hover:bg-gray-100 text-black">Rust</li>
+                            </ul>
+                        </li>
+                        <li class="rounded-sm px-3 py-1 hover:bg-gray-100 text-black">Men bottom wear</li>
+
+
+                        <li class="rounded-sm  px-3 py-1 hover:bg-gray-100 text-black">
+                            <button class="w-full text-left flex items-center outline-none focus:outline-none">
+                                <span class="pr-1 flex-1">Women clothing</span>
+                                <span class="mr-auto">
+                                    <svg class="fill-current h-4 w-4
+                              transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                    </svg>
+                                </span>
+                            </button>
+                            <ul class="bg-white border rounded-sm absolute top-0 right-0 ƒ
+                    transition duration-150 ease-in-out origin-top-left
+                    w-48
+                    ">
+                                <li class="px-3 py-1 hover:bg-gray-100 text-black">shoe</li>
+                                <li class="px-3 py-1 hover:bg-gray-100 text-black">T Shirt</li>
+                                <li class="px-3 py-1 hover:bg-gray-100 text-black">Pants</li>
+                                <li class="px-3 py-1 hover:bg-gray-100 text-black">Raincoat</li>
+                                <li class="px-3 py-1 hover:bg-gray-100 text-black">shoe</li>
+                                <li class="rounded-sm relative px-3 py-1 hover:bg-gray-100">
+                                    <button class="w-full text-left flex items-center outline-none focus:outline-none">
+                                        <span class="pr-1 flex-1 text-black">bag</span>
+                                        <span class="mr-auto">
+                                            <svg class="fill-current h-4 w-4
+                                  transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 20 20">
+                                                <path
+                                                    d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                            </svg>
+                                        </span>
+                                    </button>
+                                    <ul class="bg-white border rounded-sm absolute top-0 right-0 
+                        transition duration-150 ease-in-out origin-top-left
+                        min-w-32
+                        ">
+                                        <li class="px-3 py-1 hover:bg-gray-100 text-black">2.7</li>
+                                        <li class="px-3 py-1 hover:bg-gray-100 text-black">3+</li>
+                                    </ul>
+                                </li>
+                                <li class="px-3 py-1 hover:bg-gray-100 text-black">Go</li>
+                                <li class="px-3 py-1 hover:bg-gray-100 text-black">Rust</li>
+                            </ul>
+                        </li>
+                        <li class="rounded-sm px-3 py-1 hover:bg-gray-100 text-black">For kid</li>
+                        <li class="rounded-sm px-3 py-1 hover:bg-gray-100 text-black">Foot wear</li>
+                        <li class="rounded-sm px-3 py-1 hover:bg-gray-100 text-black">Essential</li>
+                        <li class="rounded-sm px-3 py-1 hover:bg-gray-100 text-black">Cosmestics</li>
+                        <li class="rounded-sm px-3 py-1 hover:bg-gray-100 text-black">For kid</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex flex-col space-y-3">
+                <img class="w-16 h-16" src="img/7.webp" width="80" alt="">
+                <!-- <h5>Beauty & More</h5> -->
+
+                <button id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover"
+                    class="flex items-center" type="button">
+                    Beauty & More <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="none" viewBox="0 0 10 6">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m1 1 4 4 4-4" />
+                    </svg>
+                </button>
+
+
+                <!-- Dropdown menu -->
+                <div id="dropdownHover"
+                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 bg-slate-50 bg-cover"
+                    style="z-index: 100;">
+                    <ul class="py-2 text-sm text-black" aria-labelledby="dropdownHoverButton">
+                        <li>
+                            <a href="#"
+                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-black-100 text-black">All</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-black-100 text-black">Samsung</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-black-100 text-black">Apple</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-black-100 text-black">Vivo</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-black-100 text-black">Oppo</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex flex-col space-y-3">
+                <img class="w-16 h-16" src="img/8.webp" alt="">
+                <h5>Motors</h5>
+            </div>
+            <div class="flex flex-col space-y-3">
+                <img class="w-16 h-16" src="img/9.webp" alt="">
+                <h5>Food</h5>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Category End  -->
+
+
+    <!-- Slide Start  -->
+
+    <div id="default-carousel" class="relative w-full max-w-[1600px] mx-auto px-1.5 py-2 mt-2" data-carousel="slide">
+        <!-- Carousel wrapper -->
+        <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+            <!-- Item 1 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="img/30.webp" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                    alt="...">
+            </div>
+            <!-- Item 2 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="img/60.webp" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                    alt="...">
+            </div>
+            <!-- Item 3 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="img/30.webp" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                    alt="...">
+            </div>
+            <!-- Item 4 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="img/60.webp" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                    alt="...">
+            </div>
+            <!-- Item 5 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="img/30.webp" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                    alt="...">
+            </div>
+        </div>
+        <!-- Slider indicators -->
+        <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1"
+                data-carousel-slide-to="0"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2"
+                data-carousel-slide-to="1"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
+                data-carousel-slide-to="2"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4"
+                data-carousel-slide-to="3"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5"
+                data-carousel-slide-to="4"></button>
+        </div>
+        <!-- Slider controls -->
+        <button type="button"
+            class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            data-carousel-prev>
+            <span
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M5 1 1 5l4 4" />
+                </svg>
+                <span class="sr-only">Previous</span>
+            </span>
+        </button>
+        <button type="button"
+            class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            data-carousel-next>
+            <span
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m1 9 4-4-4-4" />
+                </svg>
+                <span class="sr-only">Next</span>
+            </span>
+        </button>
+    </div>
+    <!-- Slide End  -->
+
+    <div class="w-full mx-auto max-w-[1600px]">
+        <!-- best of electronics  -->
+        <div class="w-full bg-white px-1.5 py-2 mt-5">
+            <div class="py-2 px-2.5 flex items-center justify-between">
+                <h4 class="text-xl font-bold">Best of Electronics</h4>
+                <div class="w-6 h-6 flex items-center justify-center rounded-full bg-[#1c41d6]">
+                    <svg width="16" height="16" fill="none" viewBox="0 0 17 17"
+                        style="margin-bottom:4px;margin-left:4px;margin-right:4px;margin-top:4px">
+                        <path d="m6.627 3.749 5 5-5 5" stroke="#FFFFFF" stroke-width="1.2" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                    </svg>
+                </div>
+            </div>
+
+
+            <div class="grid grid-cols-6 gap-4">
+                <div id="controls-carousel" class="relative w-full col-span-5" data-carousel="static">
+                    <!-- Carousel wrapper -->
+                    <div class="relative h-[300px] overflow-hidden rounded-lg">
+                        <!-- Item 1 -->
+                        <div class="hidden duration-700 ease-in-out flex" data-carousel-item>
+                            <div class="grid grid-flow-col gap-4 px-8">
+                                <div class="row-start-2 row-span-2">
+                                    <a href="#"
+                                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                        <img src="img/32.webp" class="h-[180px]" alt="product">
+                                        <p class="font-normal text-center text-gray-700 dark:text-gray-400">
+                                            Top Selling Keyboard
+                                        </p>
+                                        <p class="text-center">Up To 50% off</p>
+                                    </a>
+                                </div>
+                                <div class="row-start-2 row-span-2">
+                                    <a href="#"
+                                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                        <img src="img/32.webp" class="h-[180px]" alt="product">
+                                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                                            Top Selling Keyboard
+                                        </p>
+                                        <p class="text-center">Up To 50% off</p>
+                                    </a>
+                                </div>
+                                <div class="row-start-2 row-span-2">
+                                    <a href="#"
+                                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                        <img src="img/32.webp" class="h-[180px]" alt="product">
+                                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                                            Top Selling Keyboard
+                                        </p>
+                                        <p class="text-center">Up To 50% off</p>
+                                    </a>
+                                </div>
+                                <div class="row-start-2 row-span-2">
+                                    <a href="#"
+                                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                        <img src="img/32.webp" class="h-[180px]" alt="product">
+                                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                                            Top Selling Keyboard
+                                        </p>
+                                        <p class="text-center">Up To 50% off</p>
+                                    </a>
+                                </div>
+                                <div class="row-start-2 row-span-2">
+                                    <a href="#"
+                                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                        <img src="img/32.webp" class="h-[180px]" alt="product">
+                                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                                            Top Selling Keyboard
+                                        </p>
+                                        <p class="text-center">Up To 50% off</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item 2 -->
+                        <div class="hidden duration-700 ease-in-out flex" data-carousel-item>
+                            <div class="grid grid-flow-col gap-4 px-8">
+                                <div class="row-start-2 row-span-2">
+                                    <div class="" style="height: 100px;">
+                                        <a href="#"
+                                            class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                            <img src="img/32.webp" class="h-[180px]" alt="product">
+                                            <p class="font-normal text-gray-700 dark:text-gray-400">
+                                                Top Selling Keyboard
+                                            </p>
+                                            <p class="text-center">Up To 50% off</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="row-start-2 row-span-2">
+                                    <a href="#"
+                                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                        <img src="img/32.webp" class="h-[180px]" alt="product">
+                                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                                            Top Selling Keyboard
+                                        </p>
+                                        <p class="text-center">Up To 50% off</p>
+                                    </a>
+                                </div>
+                                <div class="row-start-2 row-span-2">
+                                    <a href="#"
+                                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                        <img src="img/32.webp" class="h-[180px]" alt="product">
+                                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                                            Top Selling Keyboard
+                                        </p>
+                                        <p class="text-center">Up To 50% off</p>
+                                        
+                                    </a>
+                                </div>
+                                <div class="row-start-2 row-span-2">
+                                    <a href="#"
+                                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                        <img src="img/32.webp" class="h-[180px]" alt="product">
+                                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                                            Top Selling Keyboard
+                                        </p>
+                                        <p class="text-center">Up To 50% off</p>
+                                    </a>
+                                </div>
+                                <div class="row-start-2 row-span-2">
+                                    <a href="#"
+                                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                        <img src="img/32.webp" class="h-[180px]" alt="product">
+                                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                                            Top Selling Keyboard
+                                        </p>
+                                        <p class="text-center">Up To 50% off</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item 3 -->
+                        <div class="hidden duration-700 ease-in-out flex" data-carousel-item>
+                            <div class="grid grid-flow-col gap-4 px-8">
+                                <div class="row-start-2 row-span-2">
+                                    <div class="" style="height: 100px;">
+                                        <a href="#"
+                                            class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                            <img src="img/32.webp" class="h-[180px]" alt="product">
+                                            <p class="font-normal text-gray-700 dark:text-gray-400">
+                                                Top Selling Keyboard
+                                            </p>
+                                            <p class="text-center">Up To 50% off</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="row-start-2 row-span-2">
+                                    <a href="#"
+                                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                        <img src="img/32.webp" class="h-[180px]" alt="product">
+                                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                                            Top Selling Keyboard
+                                        </p>
+                                        <p class="text-center">Up To 50% off</p>
+                                    </a>
+                                </div>
+                                <div class="row-start-2 row-span-2">
+                                    <a href="#"
+                                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                        <img src="img/32.webp" class="h-[180px]" alt="product">
+                                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                                            Top Selling Keyboard
+                                        </p>
+                                        <p class="text-center">Up To 50% off</p>
+                                    </a>
+                                </div>
+                                <div class="row-start-2 row-span-2">
+                                    <a href="#"
+                                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                        <img src="img/32.webp" class="h-[180px]" alt="product">
+                                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                                            Top Selling Keyboard
+                                        </p>
+                                        <p class="text-center">Up To 50% off</p>
+                                    </a>
+                                </div>
+                                <div class="row-start-2 row-span-2">
+                                    <a href="#"
+                                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                        <img src="img/32.webp" class="h-[180px]" alt="product">
+                                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                                            Top Selling Keyboard
+                                        </p>
+                                        <p class="text-center">Up To 50% off</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Slider controls -->
+                    <button type="button"
+                        class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                        data-carousel-prev>
+                        <span
+                            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                            <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="M5 1 1 5l4 4" />
+                            </svg>
+                            <span class="sr-only">Previous</span>
+                        </span>
+                    </button>
+                    <button type="button"
+                        class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                        data-carousel-next>
+                        <span
+                            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                            <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 9 4-4-4-4" />
+                            </svg>
+                            <span class="sr-only">Next</span>
+                        </span>
+                    </button>
+                </div>
+
+                <div>
+                    <img src="img/50.webp" width="220" alt="">
+                </div>
+            </div>
+
+        </div>
+        <!-- best of electronics  -->
+
+
+        <div class="flex flex-col mt-5 gap-y-4">
+            <!-- S -->
+            <div class="w-full bg-white">
+                <div class="py-2 px-2.5 flex items-center justify-between">
+                    <h4 class="text-xl font-bold">Food & Healthcare Products</h4>
+                    <div class="w-6 h-6 flex items-center justify-center rounded-full bg-[#1c41d6]">
+                        <svg width="16" height="16" fill="none" viewBox="0 0 17 17"
+                            style="margin-bottom:4px;margin-left:4px;margin-right:4px;margin-top:4px">
+                            <path d="m6.627 3.749 5 5-5 5" stroke="#FFFFFF" stroke-width="1.2" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div id="controls-carousel" class="relative w-full" data-carousel="static">
+                    <!-- Carousel wrapper -->
+                    <div class="relative h-[300px] overflow-hidden rounded-lg">
+                        <!-- Item 1 -->
+                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                            <div class="grid grid-cols-6 gap-4 px-8">
+                                <div class="row-start-2 row-span-2 ...">
+                                    <div class="" style="height: 100px;">
+                                        <a href="#"
+                                            class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                            <img src="img/24.jpeg" width="150" alt="product">
+                                            <p class="font-normal text-gray-700 dark:text-gray-400">
+                                                Top Selling Keyboard
+                                            </p>
+                                            <p class="text-center">Up To 50% off</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="row-start-2 row-span-2 ...">
+                                    <a href="#"
+                                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                        <img src="img/25.webp" width="150" alt="product">
+                                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                                            Top Selling Keyboard
+                                        </p>
+                                        <p class="text-center">Up To 50% off</p>
+                                    </a>
+                                </div>
+                                <div class="row-start-2 row-span-2 ...">
+                                    <a href="#"
+                                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                        <img src="img/26.jpg" width="150" alt="product">
+                                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                                            Top Selling Keyboard
+                                        </p>
+                                        <p class="text-center">Up To 50% off</p>
+                                    </a>
+                                </div>
+                                <div class="row-start-2 row-span-2 ...">
+                                    <a href="#"
+                                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                        <img src="img/27.webp" width="150" alt="product">
+                                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                                            Top Selling Keyboard
+                                        </p>
+                                        <p class="text-center">Up To 50% off</p>
+                                    </a>
+                                </div>
+                                <div class="row-start-2 row-span-2 ...">
+                                    <a href="#"
+                                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                        <img src="img/23.jpg" width="150" alt="product">
+                                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                                            Top Selling Keyboard
+                                        </p>
+                                        <p class="text-center">Up To 50% off</p>
+                                    </a>
+                                </div>
+                                <div class="row-start-2 row-span-2 ...">
+                                    <a href="#"
+                                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                        <img src="img/23.jpg" width="150" alt="product">
+                                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                                            Top Selling Keyboard
+                                        </p>
+                                        <p class="text-center">Up To 50% off</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item 2 -->
+                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                            <div class="grid grid-flow-col gap-4 px-8">
+                                <div class="row-start-2 row-span-2 ...">
+                                    <div class="" style="height: 100px;">
+                                        <a href="#"
+                                            class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                            <img src="img/24.jpeg" width="150" alt="product">
+                                            <p class="font-normal text-gray-700 dark:text-gray-400">
+                                                Top Selling Keyboard
+                                            </p>
+                                            <p class="text-center">Up To 50% off</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="row-start-2 row-span-2 ...">
+                                    <a href="#"
+                                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                        <img src="img/25.webp" width="150" alt="product">
+                                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                                            Top Selling Keyboard
+                                        </p>
+                                        <p class="text-center">Up To 50% off</p>
+                                    </a>
+                                </div>
+                                <div class="row-start-2 row-span-2 ...">
+                                    <a href="#"
+                                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                        <img src="img/26.jpg" width="150" alt="product">
+                                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                                            Top Selling Keyboard
+                                        </p>
+                                        <p class="text-center">Up To 50% off</p>
+                                    </a>
+                                </div>
+                                <div class="row-start-2 row-span-2 ...">
+                                    <a href="#"
+                                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                        <img src="img/27.webp" width="150" alt="product">
+                                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                                            Top Selling Keyboard
+                                        </p>
+                                        <p class="text-center">Up To 50% off</p>
+                                    </a>
+                                </div>
+                                <div class="row-start-2 row-span-2 ...">
+                                    <a href="#"
+                                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                        <img src="img/23.jpg" width="150" alt="product">
+                                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                                            Top Selling Keyboard
+                                        </p>
+                                        <p class="text-center">Up To 50% off</p>
+                                    </a>
+                                </div>
+                                <div class="row-start-2 row-span-2 ...">
+                                    <a href="#"
+                                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                        <img src="img/23.jpg" width="150" alt="product">
+                                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                                            Top Selling Keyboard
+                                        </p>
+                                        <p class="text-center">Up To 50% off</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item 3 -->
+                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                            <div class="grid grid-flow-col gap-4 px-8">
+                                <div class="row-start-2 row-span-2 ...">
+                                    <div class="" style="height: 100px;">
+                                        <a href="#"
+                                            class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                            <img src="img/24.jpeg" width="150" alt="product">
+                                            <p class="font-normal text-gray-700 dark:text-gray-400">
+                                                Top Selling Keyboard
+                                            </p>
+                                            <p class="text-center">Up To 50% off</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="row-start-2 row-span-2 ...">
+                                    <a href="#"
+                                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                        <img src="img/25.webp" width="150" alt="product">
+                                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                                            Top Selling Keyboard
+                                        </p>
+                                        <p class="text-center">Up To 50% off</p>
+                                    </a>
+                                </div>
+                                <div class="row-start-2 row-span-2 ...">
+                                    <a href="#"
+                                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                        <img src="img/26.jpg" width="150" alt="product">
+                                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                                            Top Selling Keyboard
+                                        </p>
+                                        <p class="text-center">Up To 50% off</p>
+                                    </a>
+                                </div>
+                                <div class="row-start-2 row-span-2 ...">
+                                    <a href="#"
+                                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                        <img src="img/27.webp" width="150" alt="product">
+                                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                                            Top Selling Keyboard
+                                        </p>
+                                        <p class="text-center">Up To 50% off</p>
+                                    </a>
+                                </div>
+                                <div class="row-start-2 row-span-2 ...">
+                                    <a href="#"
+                                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                        <img src="img/23.jpg" width="150" alt="product">
+                                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                                            Top Selling Keyboard
+                                        </p>
+                                        <p class="text-center">Up To 50% off</p>
+                                    </a>
+                                </div>
+                                <div class="row-start-2 row-span-2 ...">
+                                    <a href="#"
+                                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                        <img src="img/23.jpg" width="150" alt="product">
+                                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                                            Top Selling Keyboard
+                                        </p>
+                                        <p class="text-center">Up To 50% off</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slider controls -->
+                        <button type="button"
+                            class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                            data-carousel-prev>
+                            <span
+                                class="inline-flex items-center justify-center w-10 h-20 shadow-lg bg-white/30 dark:bg-white group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                                <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="M5 1 1 5l4 4" />
+                                </svg>
+                                <span class="sr-only">Previous</span>
+                            </span>
+                        </button>
+                        <button type="button"
+                            class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                            data-carousel-next>
+                            <span
+                                class="inline-flex items-center justify-center w-10 h-20 shadow-lg bg-white/30 dark:bg-white group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                                <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="m1 9 4-4-4-4" />
+                                </svg>
+                                <span class="sr-only">Next</span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- E -->
+
+            <!-- S -->
+            <div class="w-full">
+                <div class="w-full bg-white px-1.5 py-2 mt-5" data-aos="fade-up">
+                    <div class="py-2 px-2.5 flex items-center justify-between">
+                        <h4 class="text-xl font-bold">Fashion</h4>
+                        <div class="w-6 h-6 flex items-center justify-center rounded-full bg-[#1c41d6]">
+                            <svg width="16" height="16" fill="none" viewBox="0 0 17 17"
+                                style="margin-bottom:4px;margin-left:4px;margin-right:4px;margin-top:4px">
+                                <path d="m6.627 3.749 5 5-5 5" stroke="#FFFFFF" stroke-width="1.2"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div id="controls-carousel" class="relative w-full" data-carousel="static">
+                        <!-- Carousel wrapper -->
+                        <div class="relative h-[300px] overflow-hidden rounded-lg">
+                            <!-- Item 1 -->
+                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                <div class="grid grid-flow-col gap-4 px-8">
+                                    <div class="row-start-2 row-span-2 ...">
+                                        <div class="" style="height: 100px;">
+                                            <a href="#"
+                                                class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                                <img src="img/50.jpg" width="150" alt="product">
+                                                <p class="font-normal text-gray-700 dark:text-gray-400">
+                                                    Top Selling Keyboard
+                                                </p>
+                                                <p class="text-center">Up To 50% off</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="row-start-2 row-span-2 ...">
+                                        <a href="#"
+                                            class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                            <img src="img/50.jpg" width="150" alt="product">
+                                            <p class="font-normal text-gray-700 dark:text-gray-400">
+                                                Top Selling Keyboard
+                                            </p>
+                                            <p class="text-center">Up To 50% off</p>
+                                        </a>
+                                    </div>
+                                    <div class="row-start-2 row-span-2 ...">
+                                        <a href="#"
+                                            class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                            <img src="img/50.jpg" width="150" alt="product">
+                                            <p class="font-normal text-gray-700 dark:text-gray-400">
+                                                Top Selling Keyboard
+                                            </p>
+                                            <p class="text-center">Up To 50% off</p>
+                                        </a>
+                                    </div>
+                                    <div class="row-start-2 row-span-2 ...">
+                                        <a href="#"
+                                            class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                            <img src="img/50.jpg" width="150" alt="product">
+                                            <p class="font-normal text-gray-700 dark:text-gray-400">
+                                                Top Selling Keyboard
+                                            </p>
+                                            <p class="text-center">Up To 50% off</p>
+                                        </a>
+                                    </div>
+                                    <div class="row-start-2 row-span-2 ...">
+                                        <a href="#"
+                                            class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                            <img src="img/50.jpg" width="150" alt="product">
+                                            <p class="font-normal text-gray-700 dark:text-gray-400">
+                                                Top Selling Keyboard
+                                            </p>
+                                            <p class="text-center">Up To 50% off</p>
+                                        </a>
+                                    </div>
+                                    <div class="row-start-2 row-span-2 ...">
+                                        <a href="#"
+                                            class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                            <img src="img/50.jpg" width="150" alt="product">
+                                            <p class="font-normal text-gray-700 dark:text-gray-400">
+                                                Top Selling Keyboard
+                                            </p>
+                                            <p class="text-center">Up To 50% off</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Item 2 -->
+                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                <div class="grid grid-flow-col gap-4 px-8">
+                                    <div class="row-start-2 row-span-2 ...">
+                                        <div class="" style="height: 100px;">
+                                            <a href="#"
+                                                class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                                <img src="img/50.jpg" width="150" alt="product">
+                                                <p class="font-normal text-gray-700 dark:text-gray-400">
+                                                    Top Selling Keyboard
+                                                </p>
+                                                <p class="text-center">Up To 50% off</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="row-start-2 row-span-2 ...">
+                                        <a href="#"
+                                            class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                            <img src="img/50.jpg" width="150" alt="product">
+                                            <p class="font-normal text-gray-700 dark:text-gray-400">
+                                                Top Selling Keyboard
+                                            </p>
+                                            <p class="text-center">Up To 50% off</p>
+                                        </a>
+                                    </div>
+                                    <div class="row-start-2 row-span-2 ...">
+                                        <a href="#"
+                                            class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                            <img src="img/50.jpg" width="150" alt="product">
+                                            <p class="font-normal text-gray-700 dark:text-gray-400">
+                                                Top Selling Keyboard
+                                            </p>
+                                            <p class="text-center">Up To 50% off</p>
+                                        </a>
+                                    </div>
+                                    <div class="row-start-2 row-span-2 ...">
+                                        <a href="#"
+                                            class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                            <img src="img/50.jpg" width="150" alt="product">
+                                            <p class="font-normal text-gray-700 dark:text-gray-400">
+                                                Top Selling Keyboard
+                                            </p>
+                                            <p class="text-center">Up To 50% off</p>
+                                        </a>
+                                    </div>
+                                    <div class="row-start-2 row-span-2 ...">
+                                        <a href="#"
+                                            class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                            <img src="img/50.jpg" width="150" alt="product">
+                                            <p class="font-normal text-gray-700 dark:text-gray-400">
+                                                Top Selling Keyboard
+                                            </p>
+                                            <p class="text-center">Up To 50% off</p>
+                                        </a>
+                                    </div>
+                                    <div class="row-start-2 row-span-2 ...">
+                                        <a href="#"
+                                            class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                            <img src="img/50.jpg" width="150" alt="product">
+                                            <p class="font-normal text-gray-700 dark:text-gray-400">
+                                                Top Selling Keyboard
+                                            </p>
+                                            <p class="text-center">Up To 50% off</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Item 3 -->
+                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                <div class="grid grid-flow-col gap-4 px-8">
+                                    <div class="row-start-2 row-span-2 ...">
+                                        <div class="" style="height: 100px;">
+                                            <a href="#"
+                                                class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                                <img src="img/50.jpg" width="150" alt="product">
+                                                <p class="font-normal text-gray-700 dark:text-gray-400">
+                                                    Top Selling Keyboard
+                                                </p>
+                                                <p class="text-center">Up To 50% off</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="row-start-2 row-span-2 ...">
+                                        <a href="#"
+                                            class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                            <img src="img/50.jpg" width="150" alt="product">
+                                            <p class="font-normal text-gray-700 dark:text-gray-400">
+                                                Top Selling Keyboard
+                                            </p>
+                                            <p class="text-center">Up To 50% off</p>
+                                        </a>
+                                    </div>
+                                    <div class="row-start-2 row-span-2 ...">
+                                        <a href="#"
+                                            class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                            <img src="img/50.jpg" width="150" alt="product">
+                                            <p class="font-normal text-gray-700 dark:text-gray-400">
+                                                Top Selling Keyboard
+                                            </p>
+                                            <p class="text-center">Up To 50% off</p>
+                                        </a>
+                                    </div>
+                                    <div class="row-start-2 row-span-2 ...">
+                                        <a href="#"
+                                            class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                            <img src="img/50.jpg" width="150" alt="product">
+                                            <p class="font-normal text-gray-700 dark:text-gray-400">
+                                                Top Selling Keyboard
+                                            </p>
+                                            <p class="text-center">Up To 50% off</p>
+                                        </a>
+                                    </div>
+                                    <div class="row-start-2 row-span-2 ...">
+                                        <a href="#"
+                                            class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                            <img src="img/50.jpg" width="150" alt="product">
+                                            <p class="font-normal text-gray-700 dark:text-gray-400">
+                                                Top Selling Keyboard
+                                            </p>
+                                            <p class="text-center">Up To 50% off</p>
+                                        </a>
+                                    </div>
+                                    <div class="row-start-2 row-span-2 ...">
+                                        <a href="#"
+                                            class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                            <img src="img/50.jpg" width="150" alt="product">
+                                            <p class="font-normal text-gray-700 dark:text-gray-400">
+                                                Top Selling Keyboard
+                                            </p>
+                                            <p class="text-center">Up To 50% off</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slider controls -->
+                            <button type="button"
+                                class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                                data-carousel-prev>
+                                <span
+                                    class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                                    <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="M5 1 1 5l4 4" />
+                                    </svg>
+                                    <span class="sr-only">Previous</span>
+                                </span>
+                            </button>
+                            <button type="button"
+                                class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                                data-carousel-next>
+                                <span
+                                    class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                                    <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="m1 9 4-4-4-4" />
+                                    </svg>
+                                    <span class="sr-only">Next</span>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- E -->
+
+            <!-- S -->
+            <div class="w-full bg-white" data-aos="fade-up">
+                <div class="py-2 px-2.5 flex items-center justify-between">
+                    <h4 class="text-xl font-bold">Home & Kitchen</h4>
+                    <div class="w-6 h-6 flex items-center justify-center rounded-full bg-[#1c41d6]">
+                        <svg width="16" height="16" fill="none" viewBox="0 0 17 17"
+                            style="margin-bottom:4px;margin-left:4px;margin-right:4px;margin-top:4px">
+                            <path d="m6.627 3.749 5 5-5 5" stroke="#FFFFFF" stroke-width="1.2" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div id="controls-carousel" class="relative w-full" data-carousel="static">
+                    <!-- Carousel wrapper -->
+                    <div class="relative h-[300px] overflow-hidden rounded-lg">
+                        <!-- Item 1 -->
+                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                            <div class="grid grid-flow-col gap-4 px-8">
+                                <div class="row-start-2 row-span-2 ...">
+                                    <div class="" style="height: 100px;">
+                                        <a href="#"
+                                            class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                            <img src="img/40.jpg" width="150" alt="product">
+                                            <p class="font-normal text-gray-700 dark:text-gray-400">
+                                                Top Selling Keyboard
+                                            </p>
+                                            <p class="text-center">Up To 50% off</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="row-start-2 row-span-2 ...">
+                                    <a href="#"
+                                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                        <img src="img/35.webp" width="150" alt="product">
+                                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                                            Top Selling Keyboard
+                                        </p>
+                                        <p class="text-center">Up To 50% off</p>
+                                    </a>
+                                </div>
+                                <div class="row-start-2 row-span-2 ...">
+                                    <a href="#"
+                                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                        <img src="img/41.jpg" width="150" alt="product">
+                                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                                            Top Selling Keyboard
+                                        </p>
+                                        <p class="text-center">Up To 50% off</p>
+                                    </a>
+                                </div>
+                                <div class="row-start-2 row-span-2 ...">
+                                    <a href="#"
+                                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                        <img src="img/42.jpeg" width="150" alt="product">
+                                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                                            Top Selling Keyboard
+                                        </p>
+                                        <p class="text-center">Up To 50% off</p>
+                                    </a>
+                                </div>
+                                <div class="row-start-2 row-span-2 ...">
+                                    <a href="#"
+                                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                        <img src="img/42.jpeg" width="150" alt="product">
+                                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                                            Top Selling Keyboard
+                                        </p>
+                                        <p class="text-center">Up To 50% off</p>
+                                    </a>
+                                </div>
+                                <div class="row-start-2 row-span-2 ...">
+                                    <a href="#"
+                                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                        <img src="img/41.jpg" width="150" alt="product">
+                                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                                            Top Selling Keyboard
+                                        </p>
+                                        <p class="text-center">Up To 50% off</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item 2 -->
+                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                            <div class="grid grid-flow-col gap-4 px-8">
+                                <div class="row-start-2 row-span-2 ...">
+                                    <div class="" style="height: 100px;">
+                                        <a href="#"
+                                            class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                            <img src="img/40.jpg" width="150" alt="product">
+                                            <p class="font-normal text-gray-700 dark:text-gray-400">
+                                                Top Selling Keyboard
+                                            </p>
+                                            <p class="text-center">Up To 50% off</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="row-start-2 row-span-2 ...">
+                                    <a href="#"
+                                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                        <img src="img/35.webp" width="150" alt="product">
+                                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                                            Top Selling Keyboard
+                                        </p>
+                                        <p class="text-center">Up To 50% off</p>
+                                    </a>
+                                </div>
+                                <div class="row-start-2 row-span-2 ...">
+                                    <a href="#"
+                                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                        <img src="img/41.jpg" width="150" alt="product">
+                                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                                            Top Selling Keyboard
+                                        </p>
+                                        <p class="text-center">Up To 50% off</p>
+                                    </a>
+                                </div>
+                                <div class="row-start-2 row-span-2 ...">
+                                    <a href="#"
+                                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                        <img src="img/42.jpeg" width="150" alt="product">
+                                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                                            Top Selling Keyboard
+                                        </p>
+                                        <p class="text-center">Up To 50% off</p>
+                                    </a>
+                                </div>
+                                <div class="row-start-2 row-span-2 ...">
+                                    <a href="#"
+                                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                        <img src="img/42.jpeg" width="150" alt="product">
+                                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                                            Top Selling Keyboard
+                                        </p>
+                                        <p class="text-center">Up To 50% off</p>
+                                    </a>
+                                </div>
+                                <div class="row-start-2 row-span-2 ...">
+                                    <a href="#"
+                                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                        <img src="img/41.jpg" width="150" alt="product">
+                                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                                            Top Selling Keyboard
+                                        </p>
+                                        <p class="text-center">Up To 50% off</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item 3 -->
+                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                            <div class="grid grid-flow-col gap-4 px-8">
+                                <div class="row-start-2 row-span-2 ...">
+                                    <div class="" style="height: 100px;">
+                                        <a href="#"
+                                            class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                            <img src="img/40.jpg" width="150" alt="product">
+                                            <p class="font-normal text-gray-700 dark:text-gray-400">
+                                                Top Selling Keyboard
+                                            </p>
+                                            <p class="text-center">Up To 50% off</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="row-start-2 row-span-2 ...">
+                                    <a href="#"
+                                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                        <img src="img/35.webp" width="150" alt="product">
+                                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                                            Top Selling Keyboard
+                                        </p>
+                                        <p class="text-center">Up To 50% off</p>
+                                    </a>
+                                </div>
+                                <div class="row-start-2 row-span-2 ...">
+                                    <a href="#"
+                                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                        <img src="img/41.jpg" width="150" alt="product">
+                                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                                            Top Selling Keyboard
+                                        </p>
+                                        <p class="text-center">Up To 50% off</p>
+                                    </a>
+                                </div>
+                                <div class="row-start-2 row-span-2 ...">
+                                    <a href="#"
+                                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                        <img src="img/42.jpeg" width="150" alt="product">
+                                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                                            Top Selling Keyboard
+                                        </p>
+                                        <p class="text-center">Up To 50% off</p>
+                                    </a>
+                                </div>
+                                <div class="row-start-2 row-span-2 ...">
+                                    <a href="#"
+                                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                        <img src="img/42.jpeg" width="150" alt="product">
+                                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                                            Top Selling Keyboard
+                                        </p>
+                                        <p class="text-center">Up To 50% off</p>
+                                    </a>
+                                </div>
+                                <div class="row-start-2 row-span-2 ...">
+                                    <a href="#"
+                                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                        <img src="img/41.jpg" width="150" alt="product">
+                                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                                            Top Selling Keyboard
+                                        </p>
+                                        <p class="text-center">Up To 50% off</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slider controls -->
+                        <button type="button"
+                            class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                            data-carousel-prev>
+                            <span
+                                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                                <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="M5 1 1 5l4 4" />
+                                </svg>
+                                <span class="sr-only">Previous</span>
+                            </span>
+                        </button>
+                        <button type="button"
+                            class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                            data-carousel-next>
+                            <span
+                                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                                <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="m1 9 4-4-4-4" />
+                                </svg>
+                                <span class="sr-only">Next</span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- home & kitchen  -->
+
+
+
+            </div>
+            <!-- E -->
+
+            <!-- IT Accessories  -->
+            <div class="w-full bg-white px-1.5 py-2 mt-5 mb-3" data-aos="fade-up">
+                <div class="py-2 px-2.5 flex items-center justify-between">
+                    <h4 class="text-xl font-bold">IT Accessories</h4>
+                    <div class="w-6 h-6 flex items-center justify-center rounded-full bg-[#1c41d6]">
+                        <svg width="16" height="16" fill="none" viewBox="0 0 17 17"
+                            style="margin-bottom:4px;margin-left:4px;margin-right:4px;margin-top:4px">
+                            <path d="m6.627 3.749 5 5-5 5" stroke="#FFFFFF" stroke-width="1.2" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div id="controls-carousel" class="relative w-full" data-carousel="static">
+                    <!-- Carousel wrapper -->
+                    <div class="relative h-[300px] overflow-hidden rounded-lg">
+                        <!-- Item 1 -->
+                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                            <div class="grid grid-flow-col gap-4 px-8">
+                                <div class="row-start-2 row-span-2 ...">
+                                    <div class="" style="height: 100px;">
+                                        <a href="#"
+                                            class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                            <img src="img/99.jpeg" width="150" alt="product">
+                                            <p class="font-normal text-gray-700 dark:text-gray-400">
+                                                Top Selling Keyboard
+                                            </p>
+                                            <p class="text-center">Up To 50% off</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="row-start-2 row-span-2 ...">
+                                    <a href="#"
+                                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                        <img src="img/90.jpg" width="150" alt="product">
+                                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                                            Top Selling Keyboard
+                                        </p>
+                                        <p class="text-center">Up To 50% off</p>
+                                    </a>
+                                </div>
+                                <div class="row-start-2 row-span-2 ...">
+                                    <a href="#"
+                                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                        <img src="img/93.png" width="150" alt="product">
+                                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                                            Top Selling Keyboard
+                                        </p>
+                                        <p class="text-center">Up To 50% off</p>
+                                    </a>
+                                </div>
+                                <div class="row-start-2 row-span-2 ...">
+                                    <a href="#"
+                                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                        <img src="img/96.webp" width="120" class="mx-auto" alt="product">
+                                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                                            Top Selling Keyboard
+                                        </p>
+                                        <p class="text-center">Up To 50% off</p>
+                                    </a>
+                                </div>
+                                <div class="row-start-2 row-span-2 ...">
+                                    <a href="#"
+                                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                        <img src="img/99.jpeg" width="150" alt="product">
+                                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                                            Top Selling Keyboard
+                                        </p>
+                                        <p class="text-center">Up To 50% off</p>
+                                    </a>
+                                </div>
+                                <div class="row-start-2 row-span-2 ...">
+                                    <a href="#"
+                                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                        <img src="img/91.jpg" width="180" alt="product">
+                                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                                            Top Selling Keyboard
+                                        </p>
+                                        <p class="text-center">Up To 50% off</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item 2 -->
+                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                            <div class="grid grid-flow-col gap-4 px-8">
+                                <div class="row-start-2 row-span-2 ...">
+                                    <div class="" style="height: 100px;">
+                                        <a href="#"
+                                            class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                            <img src="img/99.jpeg" width="150" alt="product">
+                                            <p class="font-normal text-gray-700 dark:text-gray-400">
+                                                Top Selling Keyboard
+                                            </p>
+                                            <p class="text-center">Up To 50% off</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="row-start-2 row-span-2 ...">
+                                    <a href="#"
+                                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                        <img src="img/90.jpg" width="150" alt="product">
+                                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                                            Top Selling Keyboard
+                                        </p>
+                                        <p class="text-center">Up To 50% off</p>
+                                    </a>
+                                </div>
+                                <div class="row-start-2 row-span-2 ...">
+                                    <a href="#"
+                                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                        <img src="img/93.png" width="150" alt="product">
+                                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                                            Top Selling Keyboard
+                                        </p>
+                                        <p class="text-center">Up To 50% off</p>
+                                    </a>
+                                </div>
+                                <div class="row-start-2 row-span-2 ...">
+                                    <a href="#"
+                                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                        <img src="img/96.webp" width="120" class="mx-auto" alt="product">
+                                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                                            Top Selling Keyboard
+                                        </p>
+                                        <p class="text-center">Up To 50% off</p>
+                                    </a>
+                                </div>
+                                <div class="row-start-2 row-span-2 ...">
+                                    <a href="#"
+                                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                        <img src="img/99.jpeg" width="150" alt="product">
+                                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                                            Top Selling Keyboard
+                                        </p>
+                                        <p class="text-center">Up To 50% off</p>
+                                    </a>
+                                </div>
+                                <div class="row-start-2 row-span-2 ...">
+                                    <a href="#"
+                                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                        <img src="img/91.jpg" width="180" alt="product">
+                                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                                            Top Selling Keyboard
+                                        </p>
+                                        <p class="text-center">Up To 50% off</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item 3 -->
+                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                            <div class="grid grid-flow-col gap-4 px-8">
+                                <div class="row-start-2 row-span-2 ...">
+                                    <div class="" style="height: 100px;">
+                                        <a href="#"
+                                            class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                            <img src="img/99.jpeg" width="150" alt="product">
+                                            <p class="font-normal text-gray-700 dark:text-gray-400">
+                                                Top Selling Keyboard
+                                            </p>
+                                            <p class="text-center">Up To 50% off</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="row-start-2 row-span-2 ...">
+                                    <a href="#"
+                                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                        <img src="img/90.jpg" width="150" alt="product">
+                                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                                            Top Selling Keyboard
+                                        </p>
+                                        <p class="text-center">Up To 50% off</p>
+                                    </a>
+                                </div>
+                                <div class="row-start-2 row-span-2 ...">
+                                    <a href="#"
+                                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                        <img src="img/93.png" width="150" alt="product">
+                                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                                            Top Selling Keyboard
+                                        </p>
+                                        <p class="text-center">Up To 50% off</p>
+                                    </a>
+                                </div>
+                                <div class="row-start-2 row-span-2 ...">
+                                    <a href="#"
+                                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                        <img src="img/96.webp" width="120" class="mx-auto" alt="product">
+                                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                                            Top Selling Keyboard
+                                        </p>
+                                        <p class="text-center">Up To 50% off</p>
+                                    </a>
+                                </div>
+                                <div class="row-start-2 row-span-2 ...">
+                                    <a href="#"
+                                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                        <img src="img/99.jpeg" width="150" alt="product">
+                                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                                            Top Selling Keyboard
+                                        </p>
+                                        <p class="text-center">Up To 50% off</p>
+                                    </a>
+                                </div>
+                                <div class="row-start-2 row-span-2 ...">
+                                    <a href="#"
+                                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow transition transform hover:-translate-y-3">
+                                        <img src="img/91.jpg" width="180" alt="product">
+                                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                                            Top Selling Keyboard
+                                        </p>
+                                        <p class="text-center">Up To 50% off</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slider controls -->
+                        <button type="button"
+                            class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                            data-carousel-prev>
+                            <span
+                                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                                <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="M5 1 1 5l4 4" />
+                                </svg>
+                                <span class="sr-only">Previous</span>
+                            </span>
+                        </button>
+                        <button type="button"
+                            class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                            data-carousel-next>
+                            <span
+                                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                                <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="m1 9 4-4-4-4" />
+                                </svg>
+                                <span class="sr-only">Next</span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- IT Accessories  -->
+
+            <!-- smart phone  -->
+            <div class="w-full px-1.5 py-2" data-aos="fade-up">
+                <div class="grid grid-cols-3 gap-4">
+                    <div class="p-4 bg-white rounded">
+                        <h4>Mobile Accessories</h4>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="border border-gray-300 p-3">
+                                <img src="img/81.jpeg" class="mx-auto" alt="">
+                                <p class="text-center">Wallet</p>
+                                <p class="text-center">$80</p>
+                            </div>
+                            <div class="border border-gray-300 p-3">
+                                <img src="img/83.jpeg" class="mx-auto" alt="">
+                                <p class="text-center">Wallet</p>
+                                <p class="text-center">$80</p>
+                            </div>
+                            <div class="border border-gray-300 p-3">
+                                <img src="img/86.jpg" class="mx-auto" alt="">
+                                <p class="text-center">Wallet</p>
+                                <p class="text-center">$80</p>
+                            </div>
+                            <div class="border border-gray-300 p-3">
+                                <img src="img/89.jpg" width="150" class="mx-auto mb-3" alt="">
+                                <p class="text-center">Wallet</p>
+                                <p class="text-center">$80</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-2 w-full">
+                        <a href="">
+                            <img src="img/101.webp" class="h-[600px]" alt="">
+                        </a>
+                    </div>
+
+                    <!-- <div class="w-full bg-white">
+                    <img src="https://rukminim1.flixcart.com/www/530/740/promos/26/09/2023/6c3c5fe2-c236-4fa2-8d97-595e1e01da01.jpg?q=90"
+                        class="w-full h-[700px] object-cover" alt="">
+                </div> -->
+                </div>
+            </div>
+
+            <!-- start  -->
+            <div class="w-full" data-aos="fade-up">
+                <div class="grid grid-cols-3 gap-5 mx-5 my-5 w-full">
+
+                    <div class="border border-gray-200 rounded-lg shadow w-full bg-white">
+                        <h4 class="py-2 ml-6">Casual Wear</h4>
+                        <div class="grid grid-cols-2 mx-5 my-3">
+                            <div class="border border-gray-300 p-6 mr-5">
+                                <img src="img/70.webp" class="rounded transition transform hover:-translate-y-3"
+                                    width="200" alt="">
+                                <h4 class="text-center mt-3 text-gray-400">Dining Table</h4>
+                                <p class="text-center">Up To 50% off</p>
+                            </div>
+                            <div class="border border-gray-300 p-6">
+                                <img src="img/81.jpg" class="rounded transition transform hover:-translate-y-3"
+                                    width="200" alt="">
+                                <h4 class="text-center mt-3 text-gray-400">Bean Bag</h4>
+                                <p class="text-center">Up To 50% off</p>
+                            </div>
+                            <div class="mt-3 border border-gray-300 p-6 mr-5">
+                                <img src="img/82.jpeg" class="rounded transition transform hover:-translate-y-3 mt-4"
+                                    width="350" alt="">
+                                <h4 class="text-center mt-5 text-gray-400">Soft Toy</h4>
+                                <p class="text-center">Up To 50% off</p>
+                            </div>
+                            <div class="mt-3 border border-gray-300 p-6">
+                                <img src="img/83.jpg" class="rounded transition transform hover:-translate-y-3"
+                                    width="200" alt="">
+                                <h4 class="text-center mt-3 text-gray-400">Yoga Mat</h4>
+                                <p class="text-center">Up To 50% off</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border border-gray-200 rounded-lg shadow w-full bg-white">
+                        <h4 class="py-2 ml-6">Casual Wear</h4>
+                        <div class="grid grid-cols-2 mx-5 my-3">
+                            <div class="border border-gray-300 p-6 mr-5">
+                                <img src="img/84.webp" class="rounded transition transform hover:-translate-y-3"
+                                    width="200" alt="">
+                                <h4 class="text-center mt-3 text-gray-400">Smart Watch</h4>
+                                <p class="text-center">Up To 50% off</p>
+                            </div>
+                            <div class="border border-gray-300 p-6">
+                                <img src="img/85.jpg" class="rounded transition transform hover:-translate-y-3"
+                                    width="200" alt="">
+                                <h4 class="text-center mt-3 text-gray-400">Bean Bag</h4>
+                                <p class="text-center">Up To 50% off</p>
+                            </div>
+                            <div class="mt-3 border border-gray-300 p-6 mr-5">
+                                <img src="img/82.jpeg" class="rounded transition transform hover:-translate-y-3 mt-4"
+                                    width="200" alt="">
+                                <h4 class="text-center mt-3 text-gray-400">Soft Toy</h4>
+                                <p class="text-center">Up To 50% off</p>
+                            </div>
+                            <div class="mt-3 border border-gray-300 p-6">
+                                <img src="img/83.jpg" class="rounded transition transform hover:-translate-y-3"
+                                    width="200" alt="">
+                                <h4 class="text-center mt-3 text-gray-400">Yoga Mat</h4>
+                                <p class="text-center">Up To 50% off</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-full bg-white">
+                        <img src="https://rukminim1.flixcart.com/www/530/740/promos/26/09/2023/6c3c5fe2-c236-4fa2-8d97-595e1e01da01.jpg?q=90"
+                            class="w-full h-[700px] object-cover" alt="">
+                    </div>
+                </div>
+            </div>
+            <!-- end -->
+        </div>
+    </div>
+
+
+
+
+    <footer class="w-full">
+        <div class="flex flex-col bg-neutral-900 mx-auto text-[#fff] text-sm">
+            <div class="grid grid-cols-6 gap-4 content-end mt-8 ml-5">
+                <div class="m-3 p-3">
+                    <h4 class="text-gray-500">About</h4>
+                    <ul class="mt-8">
+                        <li>Contact Us</li>
+                        <li>About Us</li>
+                        <li>Careers</li>
+                        <li>Press</li>
+                        <li>Wholesale</li>
+                        <li>Corporate Information</li>
+                    </ul>
+                </div>
+                <div class="m-3 p-3">
+                    <h4 class="text-gray-500">Help</h4>
+                    <ul class="mt-8">
+                        <li>Payments</li>
+                        <li>Shipping</li>
+                        <li>Cancellation</li>
+                        <li>FAQ</li>
+                    </ul>
+                </div>
+                <div class="m-3 p-3">
+                    <h4 class="text-gray-500">Consumer Policy</h4>
+                    <ul class="mt-8">
+                        <li>Contact Us</li>
+                        <li>About Us</li>
+                        <li>Careers</li>
+                        <li>Press</li>
+                        <li>Wholesale</li>
+                        <li>Corporate Information</li>
+                    </ul>
+                </div>
+                <div class="m-3 p-3">
+                    <h4 class="text-gray-500">Social</h4>
+                    <ul class="mt-8">
+                        <li>Contact Us</li>
+                        <li>About Us</li>
+                        <li>Careers</li>
+                        <li>Press</li>
+                        <li>Wholesale</li>
+                        <li>Corporate Information</li>
+                    </ul>
+                </div>
+                <div class="border border-neutral-900 border-l-gray-200 m-3 p-3">
+                    <h4 class="text-gray-500">About</h4>
+                    <ul class="mt-8">
+                        <li>Contact Us</li>
+                        <li>About Us</li>
+                        <li>Careers</li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="m-3 p-3">
+                    <h4 class="text-gray-500">Contact Us</h4>
+                    <ul class="mt-8">
+                        <li>Contact Us</li>
+                        <li>About Us</li>
+                        <li>Careers</li>
+                        <li>Press</li>
+                        <li>Wholesale</li>
+                        <li>Corporate Information</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="" style="color: gray;">
+            <ul class="flex justify-around m-4 p-3">
+                <div class="flex items-center space-x-3">
+                    <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/sell-image-9de8ef.svg"
+                        alt="">
+                    <span>Become a seller</span>
+                </div>
+
+                <div class="flex items-center space-x-3">
+                    <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/advertise-image-866c0b.svg"
+                        alt="">
+                    <span>Advertise</span>
+                </div>
+
+                <div class="flex items-center space-x-3">
+                    <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/sell-image-9de8ef.svg"
+                        alt="">
+                    <span>Gift Card</span>
+                </div>
+
+                <div class="flex items-center space-x-3">
+                    <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/sell-image-9de8ef.svg"
+                        alt="">
+                    <span>Help Center</span>
+                </div>
+
+                <span><img
+                        src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/payment-method-c454fb.svg"
+                        alt=""></span>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+
+        // $(document).ready(function () {
+        //     $('.test').slick({
+        //         dots: true,
+        //         infinite: true,
+        //         speed: 300,
+        //         slidesToShow: 1,
+        //         centerMode: true,
+        //         variableWidth: true
+        //     })
+        // })
+
+        AOS.init();
+    </script>
+
+</body>
+
+</html>
